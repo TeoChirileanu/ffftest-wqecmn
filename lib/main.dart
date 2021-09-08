@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:ffftest/fake_checkout/fake_checkout_widget.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'fake_checkout/fake_checkout_widget.dart';
 import 'home/home_widget.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
